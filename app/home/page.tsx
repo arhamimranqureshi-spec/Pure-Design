@@ -532,7 +532,7 @@ const Home = () => {
       <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 px-4 xl:mb-20 lg:mb-20 mb-10">
         <div className="reveal-up text-center lg:mb-16 mb-8">
           <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">What We Offer</span>
-          <h2 className="title2 text-center">Providing expert <span className="relative inline-block">services<SvgUnderline /></span></h2>
+          <h2 className="title2 text-center">Providing expert <span className="relative inline-block">services</span></h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-child">
           {services.map((svc, i) => (
@@ -567,7 +567,7 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto">
           <div className="reveal-up text-center mb-16">
             <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">Our Workflow</span>
-            <h2 className="title2">How We <span className="relative inline-block">Work<SvgUnderline /></span></h2>
+            <h2 className="title2">How We <span className="relative inline-block">Work</span></h2>
             <p className="text text-gray-500 max-w-xl mx-auto mt-4">A simple, transparent 4-step process that takes you from idea to a live, growing product.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-child">
@@ -617,7 +617,7 @@ const Home = () => {
       <section className="services_sec relative 2xl:px-55 xl:px-20 px-4 mb-20 overflow-hidden">
         <div className="reveal-up text-center mb-4">
           <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">Our Work</span>
-          <h2 className="title2 text-center">Explore our <span className="relative inline-block">portfolio<SvgUnderline /></span></h2>
+          <h2 className="title2 text-center">Explore our <span className="relative inline-block">portfolio</span></h2>
         </div>
         <p className="text lg:my-12 md:my-8 my-4 text-center max-w-2xl mx-auto reveal-up">
           Get the perfect design in any category. Whatever your business need or budget, our team delivers beyond expectations.
@@ -638,7 +638,7 @@ const Home = () => {
         </div>
         <div className="max-w-[1200px] mx-auto text-center relative z-10">
           <span className="reveal-up inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.12)] border border-[rgba(247,81,38,.25)] px-4 py-1.5 rounded-full mb-6">Ready to Grow?</span>
-          <h2 className="reveal-up text-3xl md:text-5xl font-black text-white mb-6 leading-tight">Let's Build Something <span className="text-[#F75126]">Extraordinary</span> Together</h2>
+          <h2 className="reveal-up text-3xl md:text-4xl font-black text-white mb-6 leading-tight">Let's Build Something <span className="text-[#F75126]">Extraordinary</span> Together</h2>
           <p className="reveal-up text-gray-300 text-lg max-w-2xl mx-auto mb-10">From websites to full digital marketing strategies — Pure Design Hub is your one-stop partner for online growth.</p>
           <div className="reveal-up flex flex-wrap items-center justify-center gap-6">
             <Link href="/get-quote" className="pulse-btn bg-[#F75126] text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-[0_20px_50px_rgba(247,81,38,0.3)] hover:-translate-y-1 transition-all inline-flex items-center gap-3">
@@ -650,7 +650,7 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="testimonial_sec relative overflow-hidden h-full w-full bg-gradient-to-b from-white via-[#F75126]/12 to-white z-1 xl:px-20 lg:px-10 md:px-8 px-4 xl:py-20 lg:py-10 py-5">
+      <section className="testimonial_sec relative overflow-hidden h-full w-full bg-gradient-to-b from-white via-[#F75126]/12 to-white z-1 xl:px-20 lg:px-10 md:px-8 px-4 xl:py-20 lg:py-10 py-20">
         <div className="reveal-up text-center xl:mb-16 lg:mb-10 mb-6">
           <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">Client Reviews</span>
           <h3 className="title2 text-center">What people say about <span className="text-[#F75126]">Pure Design Hub</span></h3>
@@ -668,7 +668,7 @@ const Home = () => {
         <div className="max-w-[900px] mx-auto">
           <div className="reveal-up text-center mb-14">
             <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">FAQ</span>
-            <h2 className="title2">Got <span className="relative inline-block">Questions?<SvgUnderline /></span></h2>
+            <h2 className="title2">Got <span className="relative inline-block">Questions?</span></h2>
             <p className="text text-gray-500 max-w-md mx-auto mt-3">Everything you need to know about working with Pure Design Hub.</p>
           </div>
           <div className="space-y-3 stagger-child">

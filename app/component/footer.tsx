@@ -22,13 +22,13 @@ export default function Footer() {
     <>
 <section className="2xl:px-80 xl:px-55 lg:p-15 md:p-10 p-4 bg-[#F75126]">
         <div className="grid md:grid-cols-3 grid-cols-1 items-center justify-center xl:gap-20 lg:gap-10 gap-5">
-          <p className="title3 !text-white md:col-span-2">
+          <p className="title3 !text-white md:col-span-2 lg:text-left text-center">
             Your business deserves more than just a website. get fully
             customizable Website Services designed for growth.
           </p>
           <Link
             href="/get-quote"
-            className="md:px-11 px-6 2xl:py-6 md:py-4 py-3  md:text-[18px] text-sm font-bold bg-[#F75126] text-white border-white border-2 w-fit rounded-[60px]"
+            className="md:px-11 px-6 2xl:py-6 md:py-4 py-3 lg:mx-0 mx-auto  md:text-[18px] text-sm font-bold bg-[#F75126] text-white border-white border-2 w-fit rounded-[60px]"
           >
             Get Started
           </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
           sizes="100vw"
           decoding="async"
           loading="lazy"
-          className="w-12 h-12 object-cover object-center absolute -top-6 right-40"
+          className="w-12 h-12 object-cover object-center absolute -top-6 right-10"
         />
         <div className="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 items-start gap-10 mb-10">
           <div>

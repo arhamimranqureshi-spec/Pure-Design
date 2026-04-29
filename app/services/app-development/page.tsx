@@ -282,7 +282,7 @@ export default function WebDevelopmentServices() {
             <div className="hero-form bg-white/95 backdrop-blur-md rounded-[40px] p-8 md:p-14 text-[#2D3E50] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border border-white/20 relative">
               <div className="absolute -top-6 -left-6 bg-[#F75126] text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">FREE CONSULTATION</div>
               <h3 className="text-4xl font-black mb-2">Book a Free</h3>
-              <h3 className="text-4xl font-black text-[#F75126] mb-12">Web Audit</h3>
+              <h3 className="text-4xl font-black text-[#F75126] mb-12">App Audit</h3>
               <form className="space-y-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="relative group">
