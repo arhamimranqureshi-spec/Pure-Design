@@ -105,10 +105,31 @@ const portfolioItems = [
   { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img7.png", label: " ", tag: "Web Design" },
   { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img8.png", label: " ", tag: "Web Design" },
   { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img9.png", label: " ", tag: "Web Design" },
-  { cat: "Mobile Apps", src: "/assets/images/portfolio/app1.png", label: "FitTrack Pro", tag: "Mobile App" },
-  { cat: "Branding", src: "/assets/images/portfolio/brand1.png", label: "Ember Collective", tag: "Branding" },
+
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img1.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img2.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img3.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img4.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img5.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img6.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img7.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img8.png", label: "", tag: "Mobile App" },
+  { cat: "Mobile Apps", src: "/assets/images/App/app_img9.png", label: "", tag: "Mobile App" }, 
+
+
+
+
+
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img1.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img2.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img3.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img4.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img5.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img6.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img7.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img8.png", label: "", tag: "Branding" },
+  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img9.png", label: "", tag: "Branding" },
   { cat: "Logo", src: "/assets/images/portfolio/logo1.png", label: "Vanta Group", tag: "Logo" },
-  { cat: "Mobile Apps", src: "/assets/images/portfolio/app2.png", label: "AMJ Wellness", tag: "Mobile App" },
 ];
 
 function PortfolioCard({ item }: { item: typeof portfolioItems[0] }) {

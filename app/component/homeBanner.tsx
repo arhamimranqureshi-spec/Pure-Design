@@ -15,32 +15,37 @@ const HomeBanner = () => {
   return (
     <>
       <div className="relative grid lg:grid-cols-2 grid-cols-1 lg:gap-10 gap-8 overflow-hidden 2xl:pl-55 xl:pl-30 lg:pl-14 lg:pr-0 px-4 2xl:py-30 lg:py-20 py-10">
-        <div className="bannerLeft flex flex-col  lg:order-0 order-1">
-          <h1 className="title1 xl:mb-8 sm:mb-4 mb-2">
-            Transforming ideas into <span>impactful digital</span> experiences.
-          </h1>
-          <p className="text xl:mb-8 sm:mb-4 mb-2">
-            pure design hub help businesses grow, connect with their audience, and stand out online.
-          </p>
-          <div className="flex items-center xl:gap-9 gap-4">
-            <Link href="/get-quote" className="globalBtn text-white bg-[#F75126]">
-              Lets get Started
-            </Link>
-            <Link href="">
-              <Image
-                src={Trustpilot}
-                title="Trustpilot"
-                alt="Trustpilot"
-                width={0}
-                height={0}
-                sizes="100vw"
-                decoding="async"
-                loading="lazy"
-                className="sm:w-auto w-28 h-auto object-cover object-center"
-              />
-            </Link>
-          </div>
-        </div>
+       <div className="bannerLeft flex flex-col lg:order-0 order-1 items-center text-center lg:items-start lg:text-left">
+
+  <h1 className="title1 xl:mb-8 sm:mb-4 mb-2">
+    Transforming ideas into <span>impactful digital</span> experiences.
+  </h1>
+
+  <p className="text xl:mb-8 sm:mb-4 mb-2">
+    pure design hub help businesses grow, connect with their audience, and stand out online.
+  </p>
+
+  {/* BUTTON + TRUSTPILOT SAME LINE */}
+  <div className="flex items-center justify-center lg:justify-start xl:gap-9 gap-4">
+
+    <Link href="/get-quote" className="globalBtn text-white bg-[#F75126]">
+      Lets get Started
+    </Link>
+
+    <Link href="">
+      <Image
+        src={Trustpilot}
+        alt="Trustpilot"
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="sm:w-auto w-28 h-auto object-cover"
+      />
+    </Link>
+
+  </div>
+
+</div>
         <div className="bannerRight lg:pl-20 lg:order-1 order-0">
           <Image
             src={BannerImage1}

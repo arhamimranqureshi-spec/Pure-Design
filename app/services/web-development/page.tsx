@@ -9,6 +9,7 @@ import ContactUs from "@/app/component/contactUs";
 import PricingSection from "@/app/component/web-development-pricing";
 import { useState } from "react";
 import TechStack from "@/app/component/tech-stack";
+import IndustriesSection from "@/app/component/IndustriesSection";
 /* ── Image paths (replace placeholders with real assets) ── */
 const WEB_HERO_IMG  = "/assets/images/web-dev-hero.png";   /* hero right side image  */
 const WEB_WHY_IMG   = "/assets/images/web-dev-why.png";    /* why web dev matters     */
@@ -453,7 +454,7 @@ export default function WebDevelopmentServices() {
           <p className="text-center mt-12 text-gray-600 max-w-3xl mx-auto reveal-up">We combine planning, design, and development into one clear process. This helps businesses in the USA create a professional website that supports trust, engagement, and stronger digital visibility.</p>
         </div>
       </section>
-
+            <IndustriesSection type="web"/>
       {/* ══════════════════════════════════
           PROCESS
       ══════════════════════════════════ */}

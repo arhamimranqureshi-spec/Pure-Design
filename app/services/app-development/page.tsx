@@ -9,6 +9,7 @@ import ContactUs from "@/app/component/contactUs";
 import PricingSection from "@/app/component/web-development-pricing";
 import { useState } from "react";
 import TechStack from "@/app/component/tech-stack"
+import IndustriesSection from "@/app/component/IndustriesSection";
 /* ── Image paths (replace placeholders with real assets) ── */
 const WEB_HERO_IMG  = "/assets/images/web-dev-hero.png";   /* hero right side image  */
 const WEB_WHY_IMG   = "/assets/images/web-dev-why.png";    /* why web dev matters     */
@@ -481,6 +482,7 @@ export default function WebDevelopmentServices() {
         <p className="reveal-up text text-center lg:mt-16  max-w-4xl mx-auto">No matter your industry, a professional mobile app can boost engagement, streamline operations, and increase revenue</p>
         
       </section>
+      <IndustriesSection type="mobile"/>
 
       {/* ══════════════════════════════════
           REAL BUSINESS GROWTH CTA

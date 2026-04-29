@@ -535,3 +535,75 @@ form .react-tel-input .selected-flag{
         .tech-scroll-left:hover  { animation-play-state:paused; }
         .tech-scroll-right { display:flex; gap:12px; animation:techScrollRight linear infinite; width:max-content; }
         .tech-scroll-right:hover { animation-play-state:paused; }
+
+        /* ── Stagger ── */
+        .stagger-child>*:nth-child(1){transition-delay:0ms}
+        .stagger-child>*:nth-child(2){transition-delay:80ms}
+        .stagger-child>*:nth-child(3){transition-delay:160ms}
+        .stagger-child>*:nth-child(4){transition-delay:240ms}
+        .stagger-child>*:nth-child(5){transition-delay:320ms}
+        .stagger-child>*:nth-child(6){transition-delay:400ms}
+        .stagger-child>*:nth-child(7){transition-delay:480ms}
+        .stagger-child>*:nth-child(8){transition-delay:560ms}
+
+        /* ── Misc ── */
+        @keyframes faqOpen{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+        .animate-faq-open{animation:faqOpen .3s ease forwards}
+        @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+        .float-anim{animation:floatY 5s ease-in-out infinite}
+        .float-anim-slow{animation:floatY 7s ease-in-out infinite}
+        @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+        .shimmer-badge{background:linear-gradient(90deg,rgba(247,81,38,.15) 0%,rgba(247,81,38,.35) 40%,rgba(247,81,38,.15) 100%);background-size:200% auto;animation:shimmer 3s linear infinite}
+        @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(247,81,38,.45)}70%{box-shadow:0 0 0 14px rgba(247,81,38,0)}100%{box-shadow:0 0 0 0 rgba(247,81,38,0)}}
+        .pulse-btn{animation:pulseRing 2.2s ease infinite}
+        .animated-path{stroke-dasharray:1500;stroke-dashoffset:1500;animation:drawPath 1.4s ease forwards .3s}
+        @keyframes drawPath{to{stroke-dashoffset:0}}
+        @keyframes heroSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .hero-line-1{animation:heroSlideUp .7s ease forwards .1s;opacity:0}
+        .hero-line-2{animation:heroSlideUp .7s ease forwards .3s;opacity:0}
+        .hero-line-3{animation:heroSlideUp .7s ease forwards .5s;opacity:0}
+        .hero-line-4{animation:heroSlideUp .7s ease forwards .7s;opacity:0}
+        .hero-form{animation:heroSlideUp .8s ease forwards .4s;opacity:0}
+
+        /* ── Icon boxes ── */
+        .svc-icon-box{width:52px;height:52px;border-radius:14px;background:rgba(247,81,38,.07);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .3s ease,transform .35s cubic-bezier(.34,1.56,.64,1)}
+        .svc-icon-box svg{width:24px;height:24px;color:#F75126;transition:color .3s ease}
+        .group:hover .svc-icon-box{background:#F75126;transform:scale(1.08) rotate(-4deg)}
+        .group:hover .svc-icon-box svg{color:#fff}
+
+        .why-icon-box{width:46px;height:46px;border-radius:12px;background:rgba(247,81,38,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .3s ease,transform .3s ease}
+        .why-icon-box svg{width:20px;height:20px;color:#F75126;transition:color .3s ease}
+        .group:hover .why-icon-box{background:#F75126;transform:scale(1.05)}
+        .group:hover .why-icon-box svg{color:#fff}
+
+        .ind-icon-box{width:50px;height:50px;border-radius:50%;background:rgba(247,81,38,.07);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;transition:background .3s ease,transform .35s cubic-bezier(.34,1.56,.64,1)}
+        .ind-icon-box svg{width:22px;height:22px;color:#F75126;transition:color .3s ease}
+        .group:hover .ind-icon-box{background:#F75126;transform:scale(1.18) rotate(-6deg)}
+        .group:hover .ind-icon-box svg{color:#fff}
+
+        /* ── placeholder image ── */
+        .img-placeholder{background:linear-gradient(135deg,#1a2040 0%,#2d3568 50%,#1e3060 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:rgba(255,255,255,.3);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+        .img-placeholder svg{opacity:.25;width:48px;height:48px}
+        @keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 40s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scrollRight 40s linear infinite;
+}
+
+/* Optional: Animation pauses on hover */
+.group:hover .animate-scroll-left,
+.group:hover .animate-scroll-right {
+  animation-play-state: paused;
+}

@@ -20,7 +20,7 @@ const IcGeneric = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColo
 
 interface TechItem {
   name: string;
-  category: string;
+  category: string; 
   Icon: () => JSX.Element;
 }
 
@@ -127,15 +127,50 @@ const dataSets: Record<string, { title: string; sub: string; rows: TechItem[][] 
 };
 
 const catColors: Record<string, string> = {
-  Framework: "text-blue-400",
+Framework: "text-blue-400",
   Library: "text-cyan-400",
   CMS: "text-green-400",
   Styling: "text-sky-400",
   Backend: "text-purple-400",
   "E-Commerce": "text-yellow-400",
-  SEO: "text-[#F75126]",
+  Database: "text-indigo-400",
+  Infrastructure: "text-gray-400",
+
+  // App
+  Hybrid: "text-pink-400",
+  iOS: "text-slate-300",
+  Android: "text-emerald-400",
+  Deployment: "text-orange-400",
+
+  // Branding
+  Vector: "text-rose-400",
+  Design: "text-fuchsia-400",
+  "UI/UX": "text-violet-400",
+  Strategy: "text-amber-400",
+  Visual: "text-lime-400",
+  Brand: "text-red-400",
+
+  // Writing
+  Creative: "text-pink-300",
+  Specialized: "text-indigo-300",
+  Professional: "text-gray-300",
+  Quality: "text-green-300",
+  Optimization: "text-orange-300",
+
+  // Social
+  "Paid Media": "text-blue-500",
   Growth: "text-pink-400",
+  Viral: "text-red-500",
+  Management: "text-teal-400",
+  B2B: "text-blue-300",
+
+  // SEO
+  Audit: "text-yellow-500",
   Data: "text-teal-400",
+  Backlinks: "text-orange-500",
+  Keywords: "text-purple-500",
+  Structure: "text-gray-400",
+  Maps: "text-green-500",
 };
 
 // ─── HELPER COMPONENTS ───
