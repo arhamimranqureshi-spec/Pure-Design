@@ -899,7 +899,7 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           HERO
       ══════════════════════════════════ */}
-      <section className="pt-24 bg-gradient-to-br from-[#1E2B3A] via-[#2D3E50] to-[#1E2B3A] text-white py-16 px-4 md:px-20 lg:pt-24 lg:pb-40 relative overflow-hidden">
+      <section className="pt-24 bg-gradient-to-br from-[#1E2B3A] via-[#2D3E50] to-[#1E2B3A] text-white py-16 px-4 md:px-8 lg:pt-24 lg:pb-40 relative overflow-hidden">
         <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[60%] bg-[#F75126] opacity-[0.08] blur-[120px] rounded-full animate-pulse" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[70%] bg-[#2470ff] opacity-[0.05] blur-[150px] rounded-full" />
         <div className="max-w-[1400px] mx-auto z-10 relative">
@@ -912,7 +912,7 @@ export default function WebDevelopmentServices() {
                 </span>
               </div>
 
-              <h1 className="hero-line-2 text-5xl md:text-6xl font-black mb-6 leading-[1.1] tracking-tight">
+              <h1 className="hero-line-2 text-5xl md:text-6xl  font-black mb-6 leading-[1.1] tracking-tight">
                 Content Writing <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
                   Services in USA
@@ -979,7 +979,7 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           INTRO — Grow Your Business
       ══════════════════════════════════ */}
-      <section className="relative py-24 md:px-20 max-w-[1440px] mx-auto overflow-hidden bg-white">
+      <section className="relative px-6 py-24 md:px-8  max-w-[1440px] mx-auto overflow-hidden bg-white">
         {/* bg vector */}
         <div className="absolute -bottom-20 -right-40 z-0 opacity-20 pointer-events-none w-[80%] md:w-[80%] lg:w-[70%] aspect-square rotate-[-12deg]">
           <div className="relative w-full h-full scale-125 origin-bottom-right">
@@ -993,7 +993,7 @@ export default function WebDevelopmentServices() {
           </div>
         </div>
 
-        <div className="relative z-10 w-full max-w-none lg:text-left text-center flex flex-col lg:items-start items-center">
+        <div className="relative z-10 w-full max-w-none  lg:text-left text-center flex flex-col lg:items-start items-center">
           {/* TOP LABEL */}
           <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
             <span className="w-12 h-[2px] bg-[#F75126]" />
@@ -1003,7 +1003,7 @@ export default function WebDevelopmentServices() {
           </div>
 
           {/* HEADING */}
-          <h2 className="text-4xl md:text-4xl font-black text-gray-900 mb-8 leading-[1.1] uppercase">
+          <h2 className="text-3xl lg:text-6xl md:text-4xl font-black text-gray-900 mb-8 leading-[1.1] uppercase">
             Why Choose Our
             <span className="text-[#F75126] block mt-2">
               Content Writing Services?
@@ -1068,7 +1068,7 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           WHY WEB DEV MATTERS
       ══════════════════════════════════ */}
-      <section className="bg-[#f9f9f9] py-20 px-4 md:px-20">
+      <section className="bg-[#f9f9f9] py-20 px-4 md:px-8">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="reveal-left flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -1113,7 +1113,7 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           SERVICES GRID
       ══════════════════════════════════ */}
-      <section className="py-20 px-4 md:px-20">
+      <section className="py-20 px-4 md:px-8">
         <div className="max-w-[1400px] mx-auto text-center mb-16 reveal-up">
           <h2 className="title2 mb-4 uppercase text-[#272D4E]">
             Our Content Writing{" "}
@@ -1141,9 +1141,9 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           STATS BAR
       ══════════════════════════════════ */}
-      <section className="py-20 bg-[#0B0D17] text-white px-4">
+      <section className="py-20 bg-[#0B0D17] text-white px-4 md:px-8">
         <div className="max-w-[1400px] mx-auto text-center">
-          <h2 className="reveal-up text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="reveal-up text-3xl md:text-4xl font-bold mb-6">
             Over <span className="text-[#F75126]">8 Billion</span> Search
             Queries Happen Every Day!{" "}
           </h2>
@@ -1159,7 +1159,7 @@ export default function WebDevelopmentServices() {
               { val: 100, suffix: "%", label: "SEO Optimized Content" },
             ].map((stat, i) => (
               <div key={i} className="reveal-up">
-                <div className="text-4xl md:text-5xl font-bold text-[#F75126] mb-2">
+                <div className="text-4xl md:text-3xl font-bold text-[#F75126] mb-2">
                   <AnimatedCounter target={stat.val} suffix={stat.suffix} />
                 </div>
                 <div className="text-gray-400 font-semibold uppercase text-xs tracking-widest">
@@ -1174,9 +1174,9 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           WHY CHOOSE US
       ══════════════════════════════════ */}
-      <section className="py-20 bg-white px-4 md:px-20">
+      <section className="py-20 bg-white px-4 md:px-8">
         <div className="max-w-[1400px] mx-auto">
-          <h2 className="reveal-up title2 text-center mb-4 uppercase">
+          <h2 className="reveal-up title2 text-center mb-8 uppercase">
             The Benefits of{" "}
             <span className="text-[#F75126]">SEO Content Writing</span>
           </h2>
@@ -1202,7 +1202,7 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           PROCESS
       ══════════════════════════════════ */}
-      <section className="relative py-20 bg-[#F9F9F9] 2xl:px-55 xl:px-40 lg:px-20 px-4  overflow-hidden">
+      <section className="relative py-20 px-4 bg-[#F9F9F9] 2xl:px-55 xl:px-40 lg:px-8 md:px-8  overflow-hidden">
         <Image
           src={Circle}
           alt="circle"
@@ -1253,14 +1253,14 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           WHO BENEFITS
       ══════════════════════════════════ */}
-      <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 px-4   py-20">
+      <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 md:px-8 px-4   py-20">
         <h2 className="reveal-up title2 text-center lg:mb-6 mb-4">
           Who Can Benefit from Our{" "}
           <span className="relative inline-block">
             Mobile App Development Services
           </span>
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4 stagger-child">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 stagger-child">
           {industries.map((ind, i) => (
             <div
               key={i}
@@ -1275,7 +1275,7 @@ export default function WebDevelopmentServices() {
             </div>
           ))}
         </div>
-        <p className="reveal-up text text-center lg:mt-16  max-w-4xl mx-auto">
+        <p className="reveal-up text text-center lg:mt-16 md:mt-8 sm:mt-4 max-w-4xl mx-auto">
           No matter your industry, a professional mobile app can boost
           engagement, streamline operations, and increase revenue
         </p>
@@ -1284,9 +1284,9 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           REAL BUSINESS GROWTH CTA
       ══════════════════════════════════ */}
-      <section className="py-20 bg-[#272D4E] text-white px-4 md:px-20 overflow-hidden relative">
+      <section className="py-20 bg-[#272D4E] text-white px-4 md:px-8 overflow-hidden relative">
         <div className="max-w-[1200px] mx-auto text-center relative z-10">
-          <h2 className="reveal-up text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="reveal-up text-3xl md:text-4xl font-bold mb-6">
             Ready to Elevate Your Brand with{" "}
             <span className="text-[#F75126]">SEO Content Writing</span>?
           </h2>
@@ -1301,7 +1301,7 @@ export default function WebDevelopmentServices() {
             </p>
             <Link
               href="/get-quote"
-              className="pulse-btn bg-[#F75126] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-[#F75126] transition-all inline-block shadow-2xl"
+              className="pulse-btn bg-[#F75126] text-white px-10 py-5 rounded-full font-bold text-xl md:text-lg hover:bg-white hover:text-[#F75126] transition-all inline-block shadow-2xl"
             >
               Contact Us Today
             </Link>
@@ -1319,12 +1319,11 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           FAQs
       ══════════════════════════════════ */}
-      <section className="2xl:px-55 xl:px-40 lg:px-20 px-4 xl:my-20 lg:my-10 my-5">
+      <section className="2xl:px-55 xl:px-20 lg:px-10 px-4 xl:my-20 py-10 lg:my-10 my-5">
         <h2 className="reveal-up title2 text-center lg:mb-6 mb-4">
           Mobile App Development Services{" "}
           <span className="relative inline-block">
             FAQs
-            <SvgUnderline />
           </span>
         </h2>
         <p className="reveal-up text text-center lg:mb-16 mb-8">
