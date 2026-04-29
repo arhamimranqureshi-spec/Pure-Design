@@ -14,8 +14,7 @@ import HomeBanner from "../component/homeBanner";
 import Footer from "../component/footer";
 import ContactUs from "../component/contactUs";
 import AboutUsComp from "../component/AboutUsComp";
-import PricingSection from "../component/web-development-pricing";
-import TechStack from "../component/tech-stack";
+import Portfolio from "@/app/component/portfolioGallery";
 
 
 
@@ -71,133 +70,6 @@ function ScrollRevealInit() {
     return () => obs.disconnect();
   }, []);
   return null;
-}
-
-/* ─── Portfolio Tabs ─── */
-function PortfolioTabs({ categories, active, onChange }: { categories: string[]; active: string; onChange: (c: string) => void }) {
-  return (
-    <div className="flex flex-wrap justify-center gap-3 lg:mb-12 mb-8">
-      {categories.map((cat) => {
-        const isActive = cat === active;
-        return (
-          <button key={cat} onClick={() => onChange(cat)}
-            className={`portfolio-tab relative px-6 py-2.5 rounded-full text-sm font-bold tracking-wide border-2 transition-all duration-300 overflow-hidden
-              ${isActive ? "bg-[#F75126] border-[#F75126] text-white shadow-[0_8px_24px_rgba(247,81,38,0.35)] scale-105" : "bg-white border-gray-200 text-gray-600 hover:border-[#F75126] hover:text-[#F75126]"}`}>
-            {!isActive && <span className="tab-fill absolute inset-0 bg-[#F75126] opacity-0 transition-opacity duration-300 rounded-full -z-10" />}
-            <span className="relative z-10">{cat}</span>
-          </button>
-        );
-      })}
-    </div>
-  );
-}
-
-/* ══════════════════════════════════════
-   PORTFOLIO HOVER-SCROLL CARDS
-══════════════════════════════════════ */
-const portfolioItems = [
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img1.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img2.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img3.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img4.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img5.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img6.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img7.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img8.png", label: " ", tag: "Web Design" },
-  { cat: "Web Design", src: "/assets/images/Portfolio/portfolio_img9.png", label: " ", tag: "Web Design" },
-
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img1.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img2.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img3.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img4.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img5.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img6.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img7.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img8.png", label: "", tag: "Mobile App" },
-  { cat: "Mobile Apps", src: "/assets/images/App/app_img9.png", label: "", tag: "Mobile App" }, 
-
-
-
-
-
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img1.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img2.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img3.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img4.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img5.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img6.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img7.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img8.png", label: "", tag: "Branding" },
-  { cat: "Branding", src: "/assets/images/Portfolio/Branding/branding_img9.png", label: "", tag: "Branding" },
-  { cat: "Logo", src: "/assets/images/portfolio/logo1.png", label: "Vanta Group", tag: "Logo" },
-];
-
-function PortfolioCard({ item }: { item: typeof portfolioItems[0] }) {
-  return (
-  <div className="port-card group relative rounded-2xl overflow-hidden border-2 border-gray-100 hover:border-[#F75126]/30 hover:shadow-[0_20px_50px_rgba(247,81,38,0.15)] transition-all duration-500 cursor-pointer h-[650px]">
-
-    {/* IMAGE WRAPPER */}
-    <div className="absolute inset-0 overflow-hidden bg-black/5">
-
-      <div className="h-full w-full overflow-hidden">
-
-        <img
-          src={item.src}
-          alt={item.label}
-          className="w-full h-auto block object-cover transition-transform duration-[9000ms] ease-linear group-hover:-translate-y-[60%]"
-          onError={(e) => {
-            const el = e.currentTarget as HTMLImageElement;
-            el.style.display = "none";
-            if (el.parentElement) {
-              (el.parentElement as HTMLElement).style.background =
-                "linear-gradient(135deg,#1a2040,#2d3568)";
-            }
-          }}
-        />
-
-      </div>
-    </div>
-
-    {/* DARK OVERLAY */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-    {/* LABEL */}
-    <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-      <span className="text-[10px] font-bold tracking-widest uppercase text-[#F75126] block mb-1">
-        {item.tag}
-      </span>
-      <span className="font-bold text-white text-base">
-        {item.label}
-      </span>
-    </div>
-
-    {/* ZOOM ICON */}
-    <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#F75126] flex items-center justify-center opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-      <svg
-        className="w-4 h-4 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2.5}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
-        />
-      </svg>
-    </div>
-
-  </div>
-)}
-function PortfolioSec({ activeCategory }: { activeCategory: string }) {
-  const filtered = portfolioItems.filter(p => p.cat === activeCategory);
-  const shown = filtered.length > 0 ? filtered : portfolioItems;
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {shown.map((item, i) => <PortfolioCard key={i} item={item} />)}
-    </div>
-  );
 }
 
 /* ══════════════════════════════════════
@@ -614,20 +486,7 @@ const Home = () => {
       </section>
 
       {/* PORTFOLIO — hover scroll */}
-      <section className="services_sec relative 2xl:px-55 xl:px-20 px-4 mb-20 overflow-hidden">
-        <div className="reveal-up text-center mb-4">
-          <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">Our Work</span>
-          <h2 className="title2 text-center">Explore our <span className="relative inline-block">portfolio</span></h2>
-        </div>
-        <p className="text lg:my-12 md:my-8 my-4 text-center max-w-2xl mx-auto reveal-up">
-          Get the perfect design in any category. Whatever your business need or budget, our team delivers beyond expectations.
-        </p>
-        <Image src={Circle} alt="circle" width={0} height={0} sizes="100vw" loading="lazy" className="float-anim xl:w-66 xl:h-66 w-24 h-24 object-cover absolute top-0 xl:-left-33 -left-4 -z-1 circle_img" />
-        <Image src={Circle} alt="circle" width={0} height={0} sizes="100vw" loading="lazy" className="float-anim-slow xl:w-66 xl:h-66 w-24 h-24 object-cover absolute top-50 xl:-right-10 -right-6 -z-1 circle_img" />
-        <PortfolioTabs categories={categories} active={activeCategory} onChange={setActiveCategory} />
-        <PortfolioSec activeCategory={activeCategory} />
-      </section>
-
+      <Portfolio/>
       {/* TECH STACK */}
     
       {/* CTA BANNER */}
