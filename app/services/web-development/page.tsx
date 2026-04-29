@@ -454,7 +454,7 @@ export default function WebDevelopmentServices() {
           <p className="text-center mt-12 text-gray-600 max-w-3xl mx-auto reveal-up">We combine planning, design, and development into one clear process. This helps businesses in the USA create a professional website that supports trust, engagement, and stronger digital visibility.</p>
         </div>
       </section>
-            <IndustriesSection type="web"/>
+           
       {/* ══════════════════════════════════
           PROCESS
       ══════════════════════════════════ */}
@@ -481,7 +481,8 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           WHO BENEFITS
       ══════════════════════════════════ */}
-      <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 px-4 xl:mb-40 lg:mb-20 mb-10 py-20">
+       <IndustriesSection/>
+      {/* <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 px-4 xl:mb-40 lg:mb-20 mb-10 py-20">
         <h2 className="reveal-up title2 text-center lg:mb-6 mb-4">
           Who Can Benefit from Our{" "}<span className="relative inline-block">Web Development Services<SvgUnderline/></span>
         </h2>
@@ -494,7 +495,7 @@ export default function WebDevelopmentServices() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════════════════════
           REAL BUSINESS GROWTH CTA

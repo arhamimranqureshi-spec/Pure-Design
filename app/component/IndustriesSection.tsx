@@ -7,86 +7,94 @@ type IndustryItem = {
   icon: React.ReactNode;
 };
 
-// 🔥 Default icon (tum chaaho to replace kar sakte ho later)
-const defaultIcon = (
-  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-14 h-14">
-    <circle cx="32" cy="32" r="20" />
+/* ================= ICON SIZE ================= */
+const iconClass = "w-20 h-20";
+
+/* ================= ICONS ================= */
+
+const LocalBizIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <path d="M32 10c8 0 14 6 14 14 0 10-14 26-14 26S18 34 18 24c0-8 6-14 14-14z" />
+    <circle cx="32" cy="24" r="4" />
   </svg>
 );
 
-// 🔥 Type-based data
-const industriesData: Record<string, IndustryItem[]> = {
-  mobile: [
-    "Startups",
-    "Small & Medium Businesses",
-    "Enterprises",
-    "Agencies",
-    "E-commerce Brands",
-  ].map((name) => ({ name, icon: defaultIcon })),
+const StartupsIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <path d="M32 8l8 16-8 4-8-4 8-16z" />
+    <path d="M28 28v12l4 4 4-4V28" />
+    <circle cx="32" cy="44" r="2" />
+  </svg>
+);
 
-  web: [
-    "Local Businesses",
-    "Startups",
-    "Agencies",
-    "Service Providers",
-    "Consultants",
-    "Personal Brands",
-    "Growing Companies",
-    "Website Upgrade Seekers",
-  ].map((name) => ({ name, icon: defaultIcon })),
+const AgencyIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <rect x="10" y="18" width="44" height="28" rx="4" />
+    <path d="M18 46v6M46 46v6" />
+    <path d="M22 26h20M22 32h20" />
+  </svg>
+);
 
-  brand: [
-    "Startups",
-    "Small & Medium Businesses",
-    "Enterprises",
-    "Agencies",
-    "E-commerce Brands",
-  ].map((name) => ({ name, icon: defaultIcon })),
+const ServiceProviderIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <circle cx="32" cy="22" r="8" />
+    <path d="M16 52c2-10 10-14 16-14s14 4 16 14" />
+  </svg>
+);
 
-  content: [
-    "Startups",
-    "Small & Medium Businesses",
-    "Enterprises",
-    "Agencies",
-    "E-commerce Brands",
-  ].map((name) => ({ name, icon: defaultIcon })),
+const ConsultantIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <circle cx="22" cy="22" r="6" />
+    <circle cx="42" cy="22" r="6" />
+    <path d="M12 52c2-8 8-10 10-10s8 2 10 10M32 42c2-8 8-10 10-10s8 2 10 10" />
+  </svg>
+);
 
-  marketing: [
-    "Healthcare",
-    "eCommerce",
-    "Real Estate",
-    "FinTech",
-    "Travel & Tourism",
-    "Education",
-    "Tech & SaaS",
-    "Logistics",
-    "Retail & Lifestyle",
-  ].map((name) => ({ name, icon: defaultIcon })),
+const PersonalBrandIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <circle cx="32" cy="20" r="6" />
+    <path d="M20 54c2-10 8-14 12-14s10 4 12 14" />
+  </svg>
+);
 
-  seo: [
-    "Local Businesses",
-    "eCommerce Brands",
-    "Startups",
-    "Agencies",
-    "Service Providers",
-    "Consultants",
-    "Personal Brands",
-    "Growing Companies",
-  ].map((name) => ({ name, icon: defaultIcon })),
-};
+const GrowthIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <path d="M12 52h40" />
+    <rect x="16" y="36" width="6" height="16" />
+    <rect x="28" y="28" width="6" height="24" />
+    <rect x="40" y="20" width="6" height="32" />
+  </svg>
+);
 
-type Props = {
-  type: keyof typeof industriesData;
-};
+const UpgradeIcon = (
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className={iconClass}>
+    <path d="M32 10v34" />
+    <path d="M24 22l8-8 8 8" />
+    <rect x="18" y="46" width="28" height="6" rx="2" />
+  </svg>
+);
 
-export default function IndustriesSection({ type }: Props) {
-  const industries = industriesData[type] || [];
+/* ================= DATA (FIXED 8 ITEMS) ================= */
 
+const industries: IndustryItem[] = [
+  { name: "Local Businesses", icon: LocalBizIcon },
+  { name: "Startups", icon: StartupsIcon },
+  { name: "Agencies", icon: AgencyIcon },
+  { name: "Service Providers", icon: ServiceProviderIcon },
+  { name: "Consultants", icon: ConsultantIcon },
+  { name: "Personal Brands", icon: PersonalBrandIcon },
+  { name: "Growing Companies", icon: GrowthIcon },
+  { name: "Website Upgrade Seekers", icon: UpgradeIcon },
+];
+
+/* ================= COMPONENT ================= */
+
+export default function IndustriesSection() {
   return (
     <section className="industries-section">
       <style>{`
         .industries-section {
-          background: #ffffff;
+          background: #fff;
           padding: 80px 40px;
           font-family: 'Segoe UI', sans-serif;
         }
@@ -96,72 +104,42 @@ export default function IndustriesSection({ type }: Props) {
           margin-bottom: 60px;
         }
 
-        .industries-header h2 {
-          font-size: clamp(28px, 4vw, 44px);
-          font-weight: 800;
-          color: #1a2e44;
-          margin: 0 0 16px 0;
-          line-height: 1.2;
-        }
-
-        .industries-header h2 span {
-          color: #f47c20;
-        }
-
-        .industries-header p {
-          font-size: 16px;
-          color: #555;
-          max-width: 680px;
-          margin: 0 auto;
-          line-height: 1.6;
-        }
 
         .industries-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           max-width: 1100px;
-          margin: 0 auto;
+          margin: auto;
           border-top: 1px solid #e2e8f0;
           border-left: 1px solid #e2e8f0;
         }
 
         .industry-card {
+          padding: 40px 20px;
+          border-right: 1px solid #e2e8f0;
+          border-bottom: 1px solid #e2e8f0;
+          text-align: center;
+          cursor: pointer;
+          transition: 0.25s;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 40px 20px;
-          border-right: 1px solid #e2e8f0;
-          border-bottom: 1px solid #e2e8f0;
-          cursor: pointer;
-          transition: background 0.25s ease, color 0.25s ease;
-          gap: 16px;
-          text-align: center;
+          gap: 14px;
         }
 
         .industry-card:hover {
-          background: #f47c20;
-        }
-
-        .industry-card:hover .industry-icon,
-        .industry-card:hover .industry-name {
-          color: #ffffff;
-        }
-
-        .industry-icon {
-          color: #1a2e44;
-          transition: color 0.25s ease;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          background: #F75126;
+          color: #fff;
         }
 
         .industry-name {
-          font-size: 15px;
           font-weight: 600;
-          color: #1a2e44;
-          line-height: 1.4;
-          transition: color 0.25s ease;
+          font-size: 14px;
+        }
+
+        .industry-card svg {
+          display: block;
         }
 
         @media (max-width: 900px) {
@@ -174,28 +152,23 @@ export default function IndustriesSection({ type }: Props) {
           .industries-grid {
             grid-template-columns: repeat(2, 1fr);
           }
-
-          .industries-section {
-            padding: 50px 20px;
-          }
         }
       `}</style>
 
       <div className="industries-header">
-        <h2>
-          Proven <span>Expertise</span> Across Diverse Fields
+         <h2 className="reveal-up title2 text-center lg:mb-6 mb-4">
+          Proven{" "}<span className="relative inline-block">Expertise</span>Across Fields
         </h2>
-        <p>
-          Our diverse industry experience enables us to offer valuable insights and deliver
-          effective, customized solutions to our clients.
+          <p className="reveal-up text text-center lg:mb-16 mb-8 max-w-4xl mx-auto">
+          We deliver customized digital solutions across multiple industries.
         </p>
       </div>
 
       <div className="industries-grid">
-        {industries.map((industry) => (
-          <div key={industry.name} className="industry-card">
-            <div className="industry-icon">{industry.icon}</div>
-            <span className="industry-name">{industry.name}</span>
+        {industries.map((item) => (
+          <div key={item.name} className="industry-card">
+            {item.icon}
+            <div className="industry-name">{item.name}</div>
           </div>
         ))}
       </div>
