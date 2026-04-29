@@ -385,7 +385,7 @@ const Home = () => {
       </section>
 
       {/* STATS */}
-      <section className="py-12 px-4 md:px-20 bg-[#0B0D17] relative overflow-hidden xl:mb-20 lg:mb-14 mb-10">
+      {/* <section className="py-12 px-4 md:px-20 bg-[#0B0D17] relative overflow-hidden xl:mb-20 lg:mb-14 mb-10">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-0 left-20 w-48 h-48 bg-[#F75126] rounded-full blur-[80px]" />
           <div className="absolute bottom-0 right-20 w-64 h-64 bg-[#F75126] rounded-full blur-[100px]" />
@@ -398,10 +398,10 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* SERVICES */}
-      <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 px-4 xl:mb-20 lg:mb-20 mb-10">
+      <section className="services_sec 2xl:px-55 xl:px-40 lg:px-20 px-4 xl:mb-20 lg:py-20 py-20 lg:mb-20 mb-10">
         <div className="reveal-up text-center lg:mb-16 mb-8">
           <span className="inline-block text-[11px] font-bold tracking-[0.2em] uppercase text-[#F75126] bg-[rgba(247,81,38,.08)] border border-[rgba(247,81,38,.18)] px-4 py-1.5 rounded-full mb-4">What We Offer</span>
           <h2 className="title2 text-center">Providing expert <span className="relative inline-block">services</span></h2>

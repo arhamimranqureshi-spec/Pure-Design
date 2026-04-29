@@ -1,17 +1,17 @@
 "use client";
 
-import Header from "@/app/component/header"; // Importing the Header component
-import Footer from "../component/footer"; // Importing the Footer component
-import Portfolio from "../component/portfolioGallery"; // Importing Portfolio component
+import Header from "@/app/component/header"; 
+import Footer from "../component/footer"; 
+import Portfolio from "../component/portfolioGallery";
 
 export default function PFGal() {
   return (
     <>
-      <Header /> {/* Adding the Header component here */}
+      <Header /> 
       
-      <Portfolio /> {/* Adding the Portfolio component here */}
+      <Portfolio /> 
 
-      <Footer /> {/* Adding the Footer component here */}
+      <Footer /> 
     </>
   );
 }
