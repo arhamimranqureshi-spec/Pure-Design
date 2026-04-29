@@ -400,7 +400,7 @@ export default function WebDevelopmentServices() {
           <h2 className="title2 mb-4 uppercase text-[#272D4E]">Our Web Development <span className="text-[#F75126]">Services Include</span></h2>
           <p className="text max-w-2xl mx-auto text-gray-500">We provide specialized web development solutions aligned with your business needs rather than using generic templates.</p>
         </div>
-        <div className="max-w-[1400px] mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-6 stagger-child">
+        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-child">
           {webServices.map((s, i) => (
             <div key={i} className="reveal-up bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2 hover:border-[#F75126]/20">
               <div className="svc-icon-box"><s.Icon/></div>
@@ -485,7 +485,7 @@ export default function WebDevelopmentServices() {
           Who Can Benefit from Our{" "}<span className="relative inline-block">Web Development Services<SvgUnderline/></span>
         </h2>
         <p className="reveal-up text text-center lg:mb-16 mb-8 max-w-4xl mx-auto">Whether your business is new or already established, the right website can help you create stronger trust, better visibility, and improved lead generation.</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 stagger-child">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-4 stagger-child">
           {industries.map((ind, i) => (
             <div key={i} className="reveal-up bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-2 hover:border-[#F75126]/30 transition-all duration-300 group cursor-default">
               <div className="ind-icon-box"><ind.Icon/></div>
@@ -520,7 +520,6 @@ export default function WebDevelopmentServices() {
       {/* ══════════════════════════════════
           PRICING
       ══════════════════════════════════ */}
-      <div className="py-20 reveal-up"><PricingSection/></div>
 
       {/* ══════════════════════════════════
           FAQs

@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { useGeo } from "@/app/context/GeoContext";
 import { useRouter } from "next/navigation";
+import Header from "@/app/component/header";
+import Footer from "../component/footer";
+import ContactUs from "../component/contactUs";
 
 export default function MasterPricingSection() {
   const { currencySymbol } = useGeo();
@@ -69,6 +72,7 @@ export default function MasterPricingSection() {
 
   return (
     <>
+    <Header/>
       <style jsx>{`
         .pricing-wrap { width: 100%; padding: 80px 16px; background: #fafafa; position: relative; overflow: hidden; }
         .pricing-wrap::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(247,81,38,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(247,81,38,0.03) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
@@ -181,6 +185,8 @@ export default function MasterPricingSection() {
           ))}
         </div>
       </section>
+      <ContactUs/>
+        <Footer />
     </>
   );
 }
